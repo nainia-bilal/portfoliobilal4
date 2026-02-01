@@ -412,6 +412,99 @@ img {
     color: var(--secondary);
     font-size: 1.2rem;
 }
+/* ================================
+   Enhanced Skills Styles
+================================ */
+.skills-section {
+    background-color: var(--white);
+    padding: 4rem 0;
+}
+
+.skills-wrapper {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr; /* جهة الـ Hard Skills أوسع شوية */
+    gap: 3rem;
+}
+
+.column-title {
+    font-size: 1.8rem;
+    color: var(--dark-bg);
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 3px solid var(--secondary);
+    padding-bottom: 10px;
+    width: fit-content;
+}
+
+/* العناوين الفرعية للهارد سكيلز */
+.sub-column-title {
+    font-size: 1.1rem;
+    color: var(--highlight);
+    margin: 1.5rem 0 1rem 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1rem;
+}
+
+.skill-card {
+    background-color: var(--light-gray);
+    padding: 1.2rem 0.8rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: var(--transition);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    background-color: var(--white);
+    border-color: var(--secondary);
+    box-shadow: var(--shadow);
+}
+
+.skill-card i {
+    font-size: 2rem;
+    color: var(--dark-bg);
+}
+
+.skill-card span {
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--dark-bg);
+    text-align: center;
+}
+
+/* خاص بالـ Soft Skills باش يملؤوا الفراغ بشكل زوين */
+.soft-skills-special {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* التوافق مع الهواتف */
+@media (max-width: 992px) {
+    .skills-wrapper {
+        grid-template-columns: 1fr;
+    }
+    .soft-skills-special {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
 /* ================================
    Education Section
